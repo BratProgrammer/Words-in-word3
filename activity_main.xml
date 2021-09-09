@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/black"
+tools:context=".MainActivity">
+
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayout"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:layout_weight="72"
+android:layout_marginLeft="50dp"
+android:layout_marginRight="50dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent">
+
+<com.google.android.material.textfield.TextInputEditText
+android:id="@+id/inputText"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:alpha="20"
+android:background="@drawable/shape"
+android:textColorHint="@color/black"
+android:backgroundTint="#FAFAFA"
+android:hint="@string/input"
+android:textColor="#000000" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<Button
+android:id="@+id/button"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginBottom="45dp"
+android:layout_weight="1"
+android:backgroundTint="#026C6B"
+android:rotationX="38"
+android:text="@string/startButtonText"
+android:textColor="#FAFAFA"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent" />
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/resultListRV"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_margin="20dp"
+android:layout_marginBottom="60dp"
+android:background="#CFFDFC"
+android:rotationX="2"
+app:layout_constraintBottom_toTopOf="@+id/barrier"
+app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+tools:layout_editor_absoluteX="24dp" />
+
+<View
+android:id="@+id/bar"
+android:layout_width="3dp"
+android:layout_height="55dp"
+android:layout_marginStart="52dp"
+android:layout_marginTop="20dp"
+android:background="@drawable/scanner_view"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+
+<View
+android:id="@+id/barrier"
+android:layout_width="match_parent"
+android:layout_height="1dp"
+android:layout_marginBottom="25dp"
+android:background="@color/barrier_color"
+app:layout_constraintBottom_toTopOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
